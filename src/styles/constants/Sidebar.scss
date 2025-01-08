@@ -1,0 +1,154 @@
+// sidebar 레이아웃
+.sidebar-container {
+  position: relative;
+
+  width: 132.22px;
+  height: 100vh;
+  background-color: #1b1938;
+
+  // sidebar 내용 레이아웃
+  .sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    // sidebar 헤더(로고)
+    .sidebar-header-container {
+      margin: 53.78px 58.5px 24px 36.5px;
+
+      width: 37.36px;
+      height: 30.44px;
+
+      .logo {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    // sidebar 내용(네이게이션)
+    .sidebar-content-container {
+      position: relative;
+
+      width: 70px;
+
+      margin: 0 42.38px 0 20px;
+
+      .sidebar-list {
+        flex-direction: column;
+
+        width: 70px;
+
+        // 네이게이션 버튼(개별)
+        .sidebar-item {
+          display: flex;
+
+          width: 69.85px;
+          height: 74.6px;
+
+          margin-top: 17px;
+
+          .sidebar-item-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            gap: 8px;
+
+            .sidebar-item-icon-container {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              width: 36.7px;
+              height: 36.7px;
+
+              // 아이콘(svg)
+              .sidebar-icon {
+                z-index: 3;
+                color: #ffffff66;
+              }
+
+              // 아이콘(레이아웃)
+              .sidebar-item-overlay {
+                position: absolute;
+
+                width: 36.7px;
+                height: 36.7px;
+
+                border-radius: 100%;
+              }
+            }
+
+            // 네비게이션 이름
+            .sidebar-item-text {
+              width: 49px;
+
+              padding: 0;
+              margin: 0;
+
+              font-weight: 600;
+              font-size: 12px;
+              color: #ffffff66;
+            }
+          }
+
+          // 네비게이션 버튼(활성화)
+          .sidebar-item-active {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff33;
+
+            border-radius: 7px;
+
+            .sidebar-item-icon-container {
+              .sidebar-icon {
+                color: #ffffff;
+              }
+              .sidebar-item-overlay {
+                background-color: #4162ff;
+              }
+            }
+
+            .sidebar-item-text {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    // 영업상태 레이아웃
+    .sidebar-footer-container {
+      position: relative;
+      display: flex;
+
+      height: 100%;
+
+      margin-top: 181px;
+      padding: 0 39.55px 0 17.67px;
+
+      // 영업상태 버튼
+      .store-status-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 71px;
+        height: 28px;
+        background-color: #2fcaae;
+
+        border-radius: 20px;
+
+        // 영업상태 텍스트
+        .store-status {
+          margin: 0;
+          font-size: 14px;
+          color: white;
+        }
+      }
+    }
+  }
+}
