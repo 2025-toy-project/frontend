@@ -8,7 +8,7 @@ import 'styles/constants/Sidebar.scss';
  * 사장님 및 관리자 공용 컴포넌트
  */
 
-const Sidebar = (mode, status) => {
+const Sidebar = ({ mode, status }) => {
   const logo_url = owner_header.image_url; // 로고 url
 
   return (
