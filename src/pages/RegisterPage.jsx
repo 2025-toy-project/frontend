@@ -1,5 +1,6 @@
 import 'styles/register/Register.scss';
 import logo_url from '../assets/logo/logo_blue_miri.png';
+import RegisterStep1 from 'components/register/RegisterStep1';
 
 /**
  * RegisterPage 컴포넌트
@@ -25,7 +26,9 @@ const ReigsterPage = () =>{
                 <span className="register-step">가입완료</span>
             </nav>
 
-            <div className="register-content"></div>
+            <div className="register-content">
+                <RegisterStep1 />
+            </div>
 
             <div className="register-footer">
                 <button className="register-next-btn">다음</button>
