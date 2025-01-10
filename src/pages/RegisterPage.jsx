@@ -6,12 +6,6 @@ import RegisterStep2 from 'components/register/RegisterStep2';
 import RegisterStep3 from 'components/register/RegisterStep3';
 import RegisterStep4 from 'components/register/RegisterStep4';
 
-/**
- * RegisterPage 컴포넌트
- * - 회원가입 페이지의 기본 레이아웃 정의
- * - 단계에 맞춘 content 컴포넌트 호출
- */
-
 const RegisterPage = () => {
     const [currentStep, setCurrentStep] = useState(1); // 현재 단계 관리
 
@@ -31,10 +25,17 @@ const RegisterPage = () => {
         }
     };
 
-    // 다음 단계로 이동하는 함수
+    // 다음 단계로 이동
     const handleNextStep = () => {
         if (currentStep < 4) {
             setCurrentStep(currentStep + 1);
+        }
+    };
+
+    // 이전 단계로 이동
+    const handlePrevStep = () => {
+        if (currentStep > 1) {
+            setCurrentStep(currentStep - 1);
         }
     };
 
@@ -56,12 +57,24 @@ const RegisterPage = () => {
                 <span className={`register-step ${currentStep >= 5 ? 'active' : ''}`}>가입완료</span>
             </nav>
 
+            {/* 뒤로가기 버튼 */}
+            {(currentStep > 1 && currentStep <= 3) && (
+                <button className="register-back-btn" onClick={handlePrevStep}>
+                    &#x276E; {/* HTML 코드로 '❮' */}
+                </button>
+            )}
+
             <div className="register-content">{renderStepComponent()}</div>
 
             <div className="register-footer">
-                {currentStep < 4 && (
-                    <button className="register-next-btn" onClick={handleNextStep}>
-                        다음
+                {currentStep <= 4 && (
+                    <button
+                        className={currentStep <= 2 ? "register-next-btn" : "register-active-btn"}
+                        onClick={handleNextStep}
+                    >
+                        {currentStep <= 2 && "다음"}
+                        {currentStep === 3 && "가입신청"}
+                        {currentStep === 4 && "처음으로"}
                     </button>
                 )}
             </div>
