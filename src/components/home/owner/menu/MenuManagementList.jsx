@@ -7,7 +7,7 @@ import 'styles/constants/Sidebar.scss';
  * 관리할 item에 대한 네비게이션
  */
 
-const MenuManagementList = ({ manage_mode }) => {
+const MenuManagementList = ({ managemode }) => {
   return (
     <ul className="menu-management-grid">
       {menu_panel_category.map((item) => {
@@ -18,7 +18,7 @@ const MenuManagementList = ({ manage_mode }) => {
               className={({ isActive }) =>
                 `menu-management-item ${isActive ? 'active' : 'unactive'}`
               }
-              end={item.url === manage_mode}
+              end={item.url === managemode}
             >
               {item.title}
             </NavLink>
