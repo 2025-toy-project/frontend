@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'styles/register/Register.scss';
 import logo_url from '../assets/logo/logo_blue_miri.png';
 import RegisterStep1 from 'components/register/RegisterStep1';
-
+import RegisterStep2 from 'components/register/RegisterStep2';
 
 /**
  * RegisterPage 컴포넌트
@@ -19,7 +19,7 @@ const RegisterPage = () => {
             case 1:
                 return <RegisterStep1 />;
             case 2:
-                return <RegisterStep1 />;
+                return <RegisterStep2 />;
             case 3:
                 return <RegisterStep1 />;
             case 4:
