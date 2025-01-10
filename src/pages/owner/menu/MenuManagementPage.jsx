@@ -8,7 +8,6 @@ import 'styles/owner/menu/MenuManagementPage.scss';
  * - 모드는 props만 받음
  */
 const MenuManagementPage = ({ manageMode, setManageMode }) => {
-  console.log('manageMode:', manageMode);
   return (
     <div className="order-page-container">
       {/* 패널 영역 */}
