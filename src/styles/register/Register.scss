@@ -25,14 +25,8 @@
         color: #898C9A;
         font-weight: 300;
         line-height: 26.25px;
-    }
-  
-    @media (max-width: 1024px) {
-  
-        .register-header-phone {
-            padding-left: 30px;
-            font-size: 22px;
-        }
+        padding-left: 30px;
+        font-size: 22px;
     }
 }
   
@@ -41,12 +35,10 @@
     font-size: 22px;
     margin: 20px 0;
     text-align: center;
-  
-    @media (max-width: 1024px) {
-        font-size: 22px;
-        font-weight: 500;
-        margin-top: 130.41;
-    }
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 130.41;
+
 }
 
 // 회원가입 단계
@@ -64,18 +56,15 @@
             text-decoration: underline;
         }
     }
-  
-    @media (max-width: 1024px) {
-        width: 390.88px;
-        height: 22px;
-        font-size: 16px;
-        line-height: 19.2px;
-    }
+
+    width: 390.88px;
+    height: 22px;
+    font-size: 16px;
+    line-height: 19.2px;
 }
   
 // 회원가입 content
 .register-content {
-    // height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -87,19 +76,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
   
     .register-next-btn {
+        width: 290px;
+        height: 49px;
         font-size: 18px;
         background-color: #898C9A;
         color: #fff;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-
-        @media (max-width: 1024px) {
-            width: 290px;
-            height: 49px;
-        }
     }
 }
   
