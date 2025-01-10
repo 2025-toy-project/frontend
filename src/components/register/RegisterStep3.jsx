@@ -1,5 +1,9 @@
 import 'styles/register/RegisterStep3.scss';
 
+/**
+ * RegisterPage의 step3 컴포넌트
+ * - 입력정보 확인 폼 정의
+ */
 const RegisterStep3 = () => {
   return (
     <div className="register-step3-container">

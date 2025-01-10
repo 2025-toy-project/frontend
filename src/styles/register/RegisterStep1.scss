@@ -1,3 +1,4 @@
+// Step 1 컨테이너
 .register-step1-container {
     padding: 70px;
     display: flex;
@@ -8,19 +9,22 @@
     @media (max-width: 1024px) {
         width: 375.28px;
     }
-  
+
+    // 입력 폼 그룹 스타일
     .form-group {
         display: flex;
         flex-direction: column;
         gap: 8px;
-    
+
+        // 라벨 스타일
         label {
             font-size: 18px;
             font-weight: 500;
             color: #000;
             line-height: 21.48px;
         }
-  
+
+        // 입력 필드 스타일
         .form-control {
             height: 49px;
             font-size: 16px;
@@ -29,20 +33,22 @@
             border-radius: 7px;
             outline: none;
             padding-left: 20px;
-    
+
             &:focus {
                 border: 1.5px solid #007bff;
             }
         }
     }
-  
+
+    // 주소 입력 그룹 스타일
     .address-group {
         display: flex;
         align-items: center;
         gap: 8px;
 
+        // 주소 입력 필드 스타일
         .form-control {
-            flex: 1; 
+            flex: 1;
             height: 49px;
             font-size: 16px;
             color: #3E3E3E;
@@ -50,12 +56,13 @@
             border-radius: 7px;
             outline: none;
             padding-left: 20px;
-    
+
             &:focus {
                 border: 1.5px solid #007bff;
             }
         }
-    
+
+        // 검색 버튼 스타일
         .btn-search {
             width: 80px;
             height: 49px;
@@ -66,6 +73,4 @@
             border-radius: 7px;
         }
     }
-    
 }
-  

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import 'styles/register/RegisterStep2.scss';
 
+/**
+ * RegisterPage의 step2 컴포넌트
+ * - 사장님정보입력 폼 정의
+ */
+
 const RegisterStep2 = () => {
   const [isVerificationActive, setVerificationActive] = useState(false);
 

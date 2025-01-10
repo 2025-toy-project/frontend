@@ -1,3 +1,4 @@
+// Step 3 컨테이너
 .register-step3-container {
     padding: 20px;
     font-family: 'Arial', sans-serif;
@@ -8,97 +9,104 @@
     @media (max-width: 1024px) {
         width: 775px;
     }
-  
-    .info-section {
-      background-color: #E6E9EE;
-      padding: 35px 80px;
-      border-radius: 10px;
-      border: 1px solid #D3D5DE;
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-  
-      .info-group {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-  
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-  
-          label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #000;
-          }
-  
-          .form-control {
-            height: 45px;
-            font-size: 14px;
-            color: #3E3E3E;
-            background-color: #fff;
-            border: 1px solid #E6E9EE;
-            border-radius: 7px;
-            padding-left: 20px;
-            outline: none;
-          }
-  
-          .input-with-button {
-            display: flex;
-            gap: 8px;
-  
-            .btn {
-              width: 100px;
-              height: 45px;
-              font-size: 14px;
-              background-color: #898C9A;
-              color: #fff;
-              border: 1.5px solid #898C9A;
-              border-radius: 7px;
-            }
-          }
-        }
 
-        .info-group-horizontal {
+    // 정보 섹션
+    .info-section {
+        background-color: #E6E9EE;
+        padding: 35px 80px;
+        border-radius: 10px;
+        border: 1px solid #D3D5DE;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        // 정보 그룹
+        .info-group {
+            flex: 1;
             display: flex;
-            gap: 10px; 
-            
+            flex-direction: column;
+            gap: 20px;
+
+            // 폼 그룹
             .form-group {
-              flex: 1; 
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-          
-              label {
-                font-size: 14px;
-                font-weight: 500;
-                color: #333;
-              }
-          
-              .form-control {
-                width: 120px;
-                height: 45px;
-                font-size: 14px;
-                color: #3E3E3E;
-                background-color: #fff;
-                border: 1px solid #E6E9EE;
-                border-radius: 7px;
-                padding-left: 20px;
-                outline: none;
-              }
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                // 라벨 스타일
+                label {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #000;
+                }
+
+                // 입력 필드 스타일
+                .form-control {
+                    height: 45px;
+                    font-size: 14px;
+                    color: #3E3E3E;
+                    background-color: #fff;
+                    border: 1px solid #E6E9EE;
+                    border-radius: 7px;
+                    padding-left: 20px;
+                    outline: none;
+                }
+
+                // 버튼이 포함된 입력 필드
+                .input-with-button {
+                    display: flex;
+                    gap: 8px;
+
+                    .btn {
+                        width: 100px;
+                        height: 45px;
+                        font-size: 14px;
+                        background-color: #898C9A;
+                        color: #fff;
+                        border: 1.5px solid #898C9A;
+                        border-radius: 7px;
+                    }
+                }
             }
-          }
-      }
+
+            // 수평 정렬된 정보 그룹
+            .info-group-horizontal {
+                display: flex;
+                gap: 10px;
+
+                .form-group {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    label {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #333;
+                    }
+
+                    .form-control {
+                        width: 120px;
+                        height: 45px;
+                        font-size: 14px;
+                        color: #3E3E3E;
+                        background-color: #fff;
+                        border: 1px solid #E6E9EE;
+                        border-radius: 7px;
+                        padding-left: 20px;
+                        outline: none;
+                    }
+                }
+            }
+        }
     }
-  
+
+    // 메시지 스타일
     .message {
-      text-align: center;
-      color: #ff5252;
-      font-size: 14px;
-      margin-top: 20px;
+        text-align: center;
+        color: #ff5252;
+        font-size: 14px;
+        margin-top: 20px;
     }
-  }
-  
+}

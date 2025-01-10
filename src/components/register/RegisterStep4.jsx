@@ -1,7 +1,10 @@
 import 'styles/register/RegisterStep4.scss';
 import { ReactComponent as CircleIcon } from 'assets/icons/circle_icon.svg';
 
-
+/**
+ * RegisterPage의 step4 컴포넌트
+ * - 가입 신청 완료 포스터 정의
+ */
 const RegisterStep4 = () => {
   return (
     <div className="register-step4-container">
