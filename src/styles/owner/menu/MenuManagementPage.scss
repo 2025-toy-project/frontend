@@ -1,0 +1,33 @@
+.menu-management-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, auto); /* 2개씩 배치 */
+    background: #e6e9ee;
+    position: relative; /* 부모 요소에 위치 기준 설정 */
+    width: 207.5px;
+    height: 67px;
+    border-radius: 7px;
+    top: 9px;
+    left: 21px;
+  }
+  
+  .menu-management-item {
+    width: 98.12px;
+    height: 26.38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 7px;
+    background-color: #e6e9ee;
+    color: #898C9A;
+    &.active {
+      background-color: white;
+      font-weight: 500;
+      color: #4162FF;
+      box-shadow: 0px 0px 6px 0px #00000040;
+    }
+  }
+  
