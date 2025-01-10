@@ -1,5 +1,13 @@
 # frontend
 
+## Node Version
+
+- 20.4.0
+
+## NPM Version
+
+- 9.7.2
+
 ## 📌 컨벤션
 
 ### 브랜치
