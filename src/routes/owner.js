@@ -1,4 +1,4 @@
-import MenuManagementPage from 'pages/owner/menu/MenuManagementPage';
+import MenuManagementPageContainer from 'pages/owner/menu/MenuManagementPageContainer';
 import OrderPage from 'pages/owner/OrderPage';
 import OwnerPage from 'pages/owner/OwnerPage';
 
@@ -13,7 +13,7 @@ const owner = [
       },
       {
         path: 'menu',
-        element: <MenuManagementPage />,
+        element: <MenuManagementPageContainer />,
       },
     ],
   },

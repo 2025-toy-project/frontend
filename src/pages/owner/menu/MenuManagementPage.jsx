@@ -1,32 +1,32 @@
+// src/pages/owner/menu/MenuManagementPage.jsx
+
 import React from 'react';
-import MenuManagementList from 'components/home/owner/menu/MenuManagementList';
+import MenuManagementList from 'components/home/owner/menu/MenuManagementList'; // 하위 Presentational
 import 'styles/owner/menu/MenuManagementPage.scss';
 
 /**
  * MenuManagementPage (Presentational)
- * - UI 렌더링에 집중: 패널, 컨텐츠 레이아웃 배치
- * - 모드는 props만 받음
+ * - 쿼리 파라미터로부터 받은 manageMode(현재 모드)를 이용해 UI를 표시
+ * - 상태/로직은 없음. props로 주어진 onChangeMode 호출만 함
  */
-const MenuManagementPage = ({ manageMode, setManageMode }) => {
+const MenuManagementPage = ({ manageMode, onChangeMode }) => {
   return (
     <div className="order-page-container">
       {/* 패널 영역 */}
       <div className="panel-container">
         <MenuManagementList
-          manage_mode={manageMode}
-          setManageMode={setManageMode}
+          manageMode={manageMode}
+          onChangeMode={onChangeMode}
         />
-        {manageMode === '/owner/menu' && <div>메뉴 카테고리 관리 화면</div>}
-        {manageMode === '/owner/menu/list' && <div>메뉴 목록 화면</div>}
-        {manageMode === '/owner/menu/option_category' && (
-          <div>옵션 카테고리 화면</div>
-        )}
-        {manageMode === '/owner/menu/detail_option' && (
-          <div>세부 옵션 화면</div>
-        )}
       </div>
 
-      <div className="order-content-container"></div>
+      {/* 컨텐츠 영역 */}
+      <div className="order-content-container">
+        {manageMode === 'category' && <div>메뉴 카테고리 관리 화면</div>}
+        {manageMode === 'list' && <div>메뉴 목록 화면</div>}
+        {manageMode === 'option_category' && <div>옵션 카테고리 화면</div>}
+        {manageMode === 'detail_option' && <div>세부 옵션 화면</div>}
+      </div>
     </div>
   );
 };
