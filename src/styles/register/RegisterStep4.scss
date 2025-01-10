@@ -1,0 +1,30 @@
+.register-step4-container {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    .icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .title {
+      font-size: 30px;
+      font-weight: 600;
+      color: #4162ff;
+      margin-bottom: 16px;
+    }
+  
+    .description {
+      font-size: 16px;
+      font-weight: 300;
+      color: #898c9a;
+      line-height: 1.6;
+    }
+  }
+  

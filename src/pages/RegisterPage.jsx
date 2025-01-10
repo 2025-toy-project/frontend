@@ -4,6 +4,7 @@ import logo_url from '../assets/logo/logo_blue_miri.png';
 import RegisterStep1 from 'components/register/RegisterStep1';
 import RegisterStep2 from 'components/register/RegisterStep2';
 import RegisterStep3 from 'components/register/RegisterStep3';
+import RegisterStep4 from 'components/register/RegisterStep4';
 
 /**
  * RegisterPage 컴포넌트
@@ -24,7 +25,7 @@ const RegisterPage = () => {
             case 3:
                 return <RegisterStep3 />;
             case 4:
-                return <RegisterStep1 />;
+                return <RegisterStep4 />;
             default:
                 return null;
         }
@@ -52,7 +53,7 @@ const RegisterPage = () => {
                 <span className={`register-step ${currentStep === 1 ? 'active' : ''}`}>매장정보입력</span> &gt;
                 <span className={`register-step ${currentStep === 2 || currentStep === 3 ? 'active' : ''}`}>사장님정보입력</span> &gt;
                 <span className={`register-step ${currentStep === 4 ? 'active' : ''}`}>승인대기</span> &gt;
-                <span className={`register-step ${currentStep === 5 ? 'active' : ''}`}>가입완료</span>
+                <span className={`register-step ${currentStep >= 5 ? 'active' : ''}`}>가입완료</span>
             </nav>
 
             <div className="register-content">{renderStepComponent()}</div>
