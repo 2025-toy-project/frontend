@@ -18,7 +18,7 @@ const OptionCategory = () => {
   return (
     <div className="category-container">
       <div className="category-title-box">
-        옵션 카테고리
+        <p className="category-title-text">옵션 카테고리</p>
         <button className="category-sort-button">
           <svg
             width="51"

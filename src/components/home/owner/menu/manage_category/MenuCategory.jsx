@@ -19,7 +19,7 @@ const MenuCategory = () => {
   return (
     <div className="category-container">
       <div className="category-title-box">
-        메뉴 카테고리
+        <p className="category-title-text">메뉴 카테고리</p>
         <button className="category-sort-button">
           <svg
             width="51"
