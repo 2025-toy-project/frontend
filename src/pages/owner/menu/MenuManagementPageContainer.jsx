@@ -1,5 +1,3 @@
-// src/pages/owner/menu/MenuManagementPageContainer.jsx
-
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MenuManagementPage from './MenuManagementPage'; // Presentational
@@ -8,6 +6,8 @@ import MenuManagementPage from './MenuManagementPage'; // Presentational
  * MenuManagementPageContainer
  * - 쿼리 파라미터로 manageMode를 관리
  * - 비즈니스 로직/상태 처리 후, Presentational(Page)에게 props로 넘긴다
+ * - Presentational(Page)에서는 props로 받은 데이터를 화면에 렌더링한다
+ * - Presentational(Page)에서 발생하는 이벤트(함수)를 props로 받아 처리한다
  */
 const MenuManagementPageContainer = () => {
   const [searchParams, setSearchParams] = useSearchParams();
