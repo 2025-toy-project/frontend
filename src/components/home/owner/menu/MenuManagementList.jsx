@@ -16,7 +16,6 @@ const MenuManagementList = ({ manageMode, onChangeMode }) => {
         <li className="menu-management-item" key={item.content_id}>
           <button
             type="button"
-            // active/unactive 클래스 결정
             className={`menu-management-item ${
               manageMode === item.queryMode ? 'active' : ''
             }`}

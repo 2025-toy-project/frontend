@@ -1,8 +1,7 @@
-// src/pages/owner/menu/MenuManagementPage.jsx
-
 import React from 'react';
-import MenuManagementList from 'components/home/owner/menu/MenuManagementList'; // 하위 Presentational
+import MenuManagementList from 'components/home/owner/menu/MenuManagementList';
 import 'styles/owner/menu/MenuManagementPage.scss';
+import MenuCategory from 'components/home/owner/menu/manage_category/MenuCategory';
 
 /**
  * MenuManagementPage (Presentational)
@@ -18,15 +17,11 @@ const MenuManagementPage = ({ manageMode, onChangeMode }) => {
           manageMode={manageMode}
           onChangeMode={onChangeMode}
         />
+        <MenuCategory />
       </div>
 
       {/* 컨텐츠 영역 */}
-      <div className="order-content-container">
-        {manageMode === 'category' && <div>메뉴 카테고리 관리 화면</div>}
-        {manageMode === 'list' && <div>메뉴 목록 화면</div>}
-        {manageMode === 'option_category' && <div>옵션 카테고리 화면</div>}
-        {manageMode === 'detail_option' && <div>세부 옵션 화면</div>}
-      </div>
+      <div className="order-content-container"></div>
     </div>
   );
 };

@@ -10,7 +10,6 @@ import MenuManagementPage from './MenuManagementPage'; // Presentational
  * - 비즈니스 로직/상태 처리 후, Presentational(Page)에게 props로 넘긴다
  */
 const MenuManagementPageContainer = () => {
-  // 쿼리 파라미터 핸들링
   const [searchParams, setSearchParams] = useSearchParams();
 
   // 쿼리 파라미터에서 mode 가져옴. 없으면 'category'를 기본값으로
