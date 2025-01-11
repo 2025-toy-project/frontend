@@ -14,7 +14,6 @@
         font-weight: 600;   
         font-size: 16px;
         padding-top: 28px;
-        padding-bottom: 15px;
         .category-title-text{
             font-size: 16px;
             font-weight: 600;
@@ -65,6 +64,76 @@
             border: 1px solid #D9D9D9;
             margin-top: 0px;
             margin-bottom: 0px;
+        }
+    }
+    .menu-list-box{
+        background-color: #F3F4F6;
+        border-radius: 10px;
+        max-height: 470px;
+        max-width: 220px;
+        overflow: hidden;
+        .menu-list-item-container{ 
+            display: flex;
+            width: 207.5px;
+            height: 69px;
+            padding-left: 12px;
+            font-size: 14px;
+            font-weight: 400;
+            align-items: center;
+            cursor: pointer;
+            &.active{
+                max-width: 200px;
+                background-color: #D4E2FC;
+                border-radius: 10px;
+                font-weight: 600;
+                color: #4162FF;
+            }
+
+            .menu-list-item-overlay {
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 10px;
+                opacity: 0; /* 기본값: 숨김 */
+                transition: opacity 0.3s ease-in-out;
+                z-index: 10; /* 이미지 위로 표시 */
+                &.sold-out {
+                    opacity: 1; /* 표시 */
+                }
+            }
+            .menu-list-item-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                .menu-list-item-info-name{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                .menu-list-item-info-price{
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #8C8C8C;
+                }
+            }
+            .menu-list-item-img{
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                background-color: black;
+                margin-right: 10px;
+                &.sold-out{
+                    opacity: 0.5; /* 이미지 어둡게 */
+                    filter: grayscale(100%); /* 흑백 처리 (선택 사항) */
+                }
+            }
         }
     }
     .category-add-button{
