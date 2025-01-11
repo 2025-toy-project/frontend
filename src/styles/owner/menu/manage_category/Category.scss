@@ -8,15 +8,32 @@
     width: 100%;
     .category-title-box{
         display: flex;
-        position: relative;
+        width: 80%;
+        justify-content: space-between; /* 제목과 버튼을 양쪽 끝으로 배치 */
+        align-items: center; /* 세로 정렬 */
         font-weight: 600;   
         font-size: 16px;
-        gap: 45px;
         padding-top: 28px;
         padding-bottom: 15px;
+        .category-title-text{
+            font-size: 16px;
+            font-weight: 600;
+        }
         .category-sort-button{
             background-color: transparent;
             border: none;
+        }
+        .category-count-info{
+            display: flex;
+            justify-content: center;
+            width: 27.5px;
+            height: 18.5px;
+            background-color: #4162FF;
+            color: white;
+            font-size: 12px;    
+            font-weight: 400;
+            border: none;
+            border-radius: 50px;
         }
     }
     .category-list-box{
@@ -33,6 +50,7 @@
             font-size: 14px;
             font-weight: 400;
             align-items: center;
+            cursor: pointer;
             &.active{
                 max-width: 200px;
                 background-color: #D4E2FC;
