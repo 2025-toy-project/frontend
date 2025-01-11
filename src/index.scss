@@ -2,6 +2,21 @@ button {
   cursor: pointer;
 }
 
+* {
+  &::-webkit-scrollbar {
+    width: 6px; // 스크롤바 너비
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px; // 스크롤바 트랙의 모서리 둥글게
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); // 스크롤바 색상
+    border-radius: 10px; // 스크롤바 모서리 둥글게
+  }
+}
+
 body {
   background-color: #f7f7f7;
   overflow: auto;
