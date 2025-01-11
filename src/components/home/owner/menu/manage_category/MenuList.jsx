@@ -9,11 +9,9 @@ const menu_list = [
 ];
 
 const MenuList = () => {
-  const [activeMenu, setActiveMenu] = useState(null); // 활성화된 카테고리를 관리하는 상태
-
+  const [activeMenu, setActiveMenu] = useState(null);
   const handleMenuClick = (id) => {
-    if (menu_list.find((menu) => menu.id === id).soldOut) return; // 품절 상품은 클릭 불가
-    setActiveMenu(id); // 클릭된 카테고리를 활성화 상태로 설정
+    setActiveMenu(id);
   };
 
   return (
