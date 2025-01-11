@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import owner_logo from 'assets/logo/logo_white.png'; //이미지 임시용 로고 이미지 불러옴
 const menu_list = [
-  { id: 1, name: '추천 상품' },
-  { id: 2, name: '음료' },
-  { id: 3, name: '디저트' },
-  { id: 4, name: '식사' },
-  { id: 5, name: '사이드' },
+  { id: 1, name: '시그니처 탕수육', price: 20000 },
+  { id: 2, name: '고량주', price: 5000 },
+  { id: 3, name: '짬뽕', price: 7000 },
+  { id: 4, name: '팔보채', price: 28000 },
+  { id: 5, name: '공기밥', price: 1000 },
 ];
 const MenuList = () => {
   const [activeMenu, setActiveMenu] = useState(null); // 활성화된 카테고리를 관리하는 상태
@@ -20,17 +21,22 @@ const MenuList = () => {
         <div className="category-count-info">{menu_list.length}</div>
       </div>
 
-      <div className="category-list-box">
-        {menu_list.map((menu, index) => (
+      <div className="menu-list-box">
+        {menu_list.map((menu) => (
           <React.Fragment key={menu.id}>
-            {index !== 0 && <hr className="category-divider" />}
             <li
-              className={`category-list-item ${
+              className={`menu-list-item-container ${
                 activeMenu === menu.id ? 'active' : ''
               }`}
               onClick={() => handleMenuClick(menu.id)}
             >
-              {menu.name}
+              <img src={owner_logo} className="menu-list-item-img" />
+              <div className="menu-list-item-info">
+                <span className="menu-list-item-info-name">{menu.name}</span>
+                <span className="menu-list-item-info-price">
+                  {menu.price}원
+                </span>
+              </div>
             </li>
           </React.Fragment>
         ))}
