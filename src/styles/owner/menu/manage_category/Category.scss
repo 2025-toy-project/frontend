@@ -1,64 +1,64 @@
-    .category-container{
-        position: relative;
+.category-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    .category-title-box{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        height: 100%;
-        width: 100%;
-        .category-title-box{
-            display: flex;
-            position: relative;
-            font-weight: 600;   
-            font-size: 16px;
-            gap: 45px;
-            padding-top: 28px;
-            padding-bottom: 15px;
-            .category-sort-button{
-                background-color: transparent;
-                border: none;
-            }
-        }
-        .category-list-box{
-            background-color: #F3F4F6;
-            border-radius: 10px;
-            max-height: 470px;
-            max-width: 220px;
-            overflow: hidden;
-            .category-list-item{ 
-                display: flex;
-                width: 207.5px;
-                height: 47px;
-                padding-left: 19px;
-                font-size: 14px;
-                font-weight: 400;
-                align-items: center;
-                &.active{
-                    max-width: 200px;
-                    background-color: #D4E2FC;
-                    border-radius: 10px;
-                    font-weight: 600;
-                    color: #4162FF;
-                }
-            }
-            .category-divider{
-                width: 80%;
-                height: 0px;
-                border: 1px solid #D9D9D9;
-                margin-top: 0px;
-                margin-bottom: 0px;
-            }
-        }
-        .category-add-button{
-            width: 185px;
-            height: 45px;
-            border: 1px solid #4162FF ;
-            border-radius: 50px;
-            background-color: white;
-            color: #4162FF;
-            font-size: 16px;
-            font-weight: 500;
-            margin-top: auto;
-            margin-bottom: 50px;
+        position: relative;
+        font-weight: 600;   
+        font-size: 16px;
+        gap: 45px;
+        padding-top: 28px;
+        padding-bottom: 15px;
+        .category-sort-button{
+            background-color: transparent;
+            border: none;
         }
     }
+    .category-list-box{
+        background-color: #F3F4F6;
+        border-radius: 10px;
+        max-height: 470px;
+        max-width: 220px;
+        overflow: hidden;
+        .category-list-item{ 
+            display: flex;
+            width: 207.5px;
+            height: 47px;
+            padding-left: 19px;
+            font-size: 14px;
+            font-weight: 400;
+            align-items: center;
+            &.active{
+                max-width: 200px;
+                background-color: #D4E2FC;
+                border-radius: 10px;
+                font-weight: 600;
+                color: #4162FF;
+            }
+        }
+        .category-divider{
+            width: 80%;
+            height: 0px;
+            border: 1px solid #D9D9D9;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .category-add-button{
+        width: 185px;
+        height: 45px;
+        border: 1px solid #4162FF ;
+        border-radius: 50px;
+        background-color: white;
+        color: #4162FF;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: auto;
+        margin-bottom: 50px;
+    }
+}
