@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'styles/owner/menu/manage_category/MenuCategory.scss';
+import 'styles/owner/menu/manage_category/Category.scss';
 
 const menu_category_list = [
   { id: 1, name: '추천 상품' },
@@ -17,10 +17,10 @@ const MenuCategory = () => {
   };
 
   return (
-    <div className="menu-category-container">
-      <div className="menu-category-title-box">
+    <div className="category-container">
+      <div className="category-title-box">
         메뉴 카테고리
-        <button className="menu-category-sort-button">
+        <button className="category-sort-button">
           <svg
             width="51"
             height="25"
@@ -48,12 +48,12 @@ const MenuCategory = () => {
           </svg>
         </button>
       </div>
-      <div className="menu-category-list-box">
+      <div className="category-list-box">
         {menu_category_list.map((category_list, index) => (
           <React.Fragment key={category_list.id}>
-            {index !== 0 && <hr className="menu-category-divider" />}
+            {index !== 0 && <hr className="category-divider" />}
             <li
-              className={`menu-category-list-item ${
+              className={`category-list-item ${
                 activeCategory === category_list.id ? 'active' : ''
               }`}
               onClick={() => handleCategoryClick(category_list.id)}
@@ -63,7 +63,7 @@ const MenuCategory = () => {
           </React.Fragment>
         ))}
       </div>
-      <button className="menu-category-add-button">+ 메뉴 카테고리 추가</button>
+      <button className="category-add-button">+ 메뉴 카테고리 추가</button>
     </div>
   );
 };
