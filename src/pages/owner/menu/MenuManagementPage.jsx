@@ -1,16 +1,12 @@
 import React from 'react';
 import MenuManagementList from 'components/home/owner/menu/MenuManagementList';
-import MenuCategory from 'components/home/owner/menu/manage_category/MenuCategory';
-import OptionCategory from 'components/home/owner/menu/manage_category/OptionCategory';
-import MenuList from 'components/home/owner/menu/manage_category/MenuList';
-import DetailOption from 'components/home/owner/menu/manage_category/DetailOption';
-
 import 'styles/owner/menu/MenuManagementPage.scss';
 import { useSearchParams } from 'react-router-dom';
+import menu_panel_category from 'constants/menu/menuManage';
 /**
  * MenuManagementPage (Presentational)
  * - 쿼리 파라미터로부터 받은 manageMode(현재 모드)를 props로 전달받아 적절한 UI를 표시
- * - 상태/로직은 없음. props로 주어진 onChangeMode 호출만 함
+ * - 상수로부터 전달받은 쿼리에 맞는 컴포넌트를 불러옴
  */
 const MenuManagementPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -22,18 +18,12 @@ const MenuManagementPage = () => {
   const handleModeChange = (newMode) => {
     setSearchParams({ mode: newMode });
   };
-  const renderPanelContent = () => {
-    switch (manageMode) {
-      case 'list':
-        return <MenuList />;
-      case 'option_category':
-        return <OptionCategory />;
-      case 'detail_option':
-        return <DetailOption />;
-      default:
-        return <MenuCategory />;
-    }
-  };
+
+  // menu_panel_category에서 현재 모드에 맞는 컴포넌트를 찾아서 렌더링
+  const renderPanelContent = menu_panel_category.find(
+    (category) => category.queryMode === manageMode
+  ).component;
+
   return (
     <div className="order-page-container">
       {/* 패널 영역 */}
@@ -42,7 +32,7 @@ const MenuManagementPage = () => {
           manageMode={manageMode}
           onChangeMode={handleModeChange}
         />
-        {renderPanelContent()}
+        {renderPanelContent}
       </div>
 
       {/* 컨텐츠 영역 */}
