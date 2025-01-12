@@ -11,10 +11,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     // sidebar 헤더(로고)
     .sidebar-header-container {
-      margin: 29.78px 58.38px 34.55px 36.5px;
+      margin: 29.78px 58.38px 32.55px 36.5px;
 
       width: 37.36px;
       height: 30.44px;
@@ -43,9 +44,9 @@
           display: flex;
 
           width: 69.85px;
-          height: 74.6px;
+          height: 72.6px;
 
-          margin-top: 17px;
+          margin-top: 10px;
 
           .sidebar-item-link {
             display: flex;
@@ -55,7 +56,6 @@
 
             width: 100%;
             gap: 8px;
-
             .sidebar-item-icon-container {
               position: relative;
               display: flex;
@@ -125,9 +125,9 @@
       position: relative;
       display: flex;
 
-      height: 100%;
+      height: auto;
 
-      margin-top: 181px;
+      margin-top: 168px;
       padding: 0 39.55px 0 17.67px;
 
       // 영업상태 버튼
