@@ -25,7 +25,6 @@ const OptionCategory = () => {
       <div className="category-list-box">
         {option_category_list.map((category_list, index) => (
           <React.Fragment key={category_list.id}>
-            {index !== 0 && <hr className="category-divider" />}
             <li
               className={`category-list-item ${
                 activeCategory === category_list.id ? 'active' : ''

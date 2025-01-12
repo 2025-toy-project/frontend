@@ -24,9 +24,8 @@ const MenuCategory = () => {
         <SortButton className="category-sort-button"></SortButton>
       </div>
       <div className="category-list-box">
-        {menu_category_list.map((category_list, index) => (
+        {menu_category_list.map((category_list) => (
           <React.Fragment key={category_list.id}>
-            {index !== 0 && <hr className="category-divider" />}
             <li
               className={`category-list-item ${
                 activeCategory === category_list.id ? 'active' : ''

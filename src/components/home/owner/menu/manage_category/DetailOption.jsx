@@ -21,9 +21,8 @@ const DetailOption = () => {
         <p className="category-title-text">세부옵션</p>
       </div>
       <div className="category-list-box">
-        {detail_option_list.map((DetailOption, index) => (
+        {detail_option_list.map((DetailOption) => (
           <React.Fragment key={DetailOption.id}>
-            {index !== 0 && <hr className="category-divider" />}
             <li
               className={`category-list-item ${
                 activeOption === DetailOption.id ? 'active' : ''
