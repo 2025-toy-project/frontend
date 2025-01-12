@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;// 박스 모델 설정 패딩, 보더가 넘어가는거 방지해줌
+  }  
+.category-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    .category-title-box{// 메뉴 관리 제목 박스 
+        display: flex;
+        width: 80%;
+        justify-content: space-between; 
+        align-items: center;
+        font-weight: 600;   
+        font-size: 16px;
+        padding-top: 28px;
+        .category-title-text{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .category-sort-button{
+            background-color: transparent;
+            border: none;
+        }
+        .category-count-info{
+            display: flex;
+            justify-content: center;
+            width: 27.5px;
+            height: 18.5px;
+            background-color: #4162FF;
+            color: white;
+            font-size: 12px;    
+            font-weight: 400;
+            border: none;
+            border-radius: 50px;
+        }
+    }
+    .category-list-box{// 메뉴 카테고리, 옵션 카테고리, 세부 옵션 리스트 박스
+        background-color: #F3F4F6;
+        border-radius: 10px;
+        width: 220px;
+        max-height: 470px;
+        overflow: hidden;
+        .category-list-item{ 
+            display: flex;
+            width: 100%;
+            height: 47px;
+            padding-left: 19px;
+            font-size: 14px;
+            font-weight: 400;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            &.active{
+                background-color: #D4E2FC;
+                font-weight: 600;
+                color: #4162FF;
+            }
+            .option-list-item-overlay{// 해당 세부 옵션이 품절일때 오버레이 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 18px;
+                font-size:11px;
+                font-weight: 400;
+                width: 34px;
+                height: 18px;
+                opacity: 0;
+                background-color: #FF5A69;
+                color: white;
+                z-index: 10; 
+                border-radius: 50px;
+                &.sold-out{
+                    opacity: 1;
+                }
+            }
+        }
+        .category-divider{
+            width: 80%;
+            height: 0px;
+            border: 1px solid #D9D9D9;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .menu-list-box{// 메뉴 리스트 박스
+        background-color: #F3F4F6;
+        border-radius: 10px;
+        max-height: 470px;
+        max-width: 220px;
+        overflow: hidden;
+        .menu-list-item-container{ // 메뉴 리스트 아이템 컨테이너
+            display: flex;
+            width: 207.5px;
+            height: 69px;
+            padding-left: 12px;
+            font-size: 14px;
+            font-weight: 400;
+            align-items: center;
+            cursor: pointer;
+            &.active{
+                max-width: 200px;
+                background-color: #D4E2FC;
+                border-radius: 10px;
+                font-weight: 600;
+                color: #4162FF;
+            }
+
+            .menu-list-item-overlay {// 판매 중지 상태일 때 표시되는 검은 배경
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 10px;
+                opacity: 0;
+                z-index: 10; 
+                &.sold-out {
+                    opacity: 1; 
+                }
+            }
+            .menu-list-item-info{// 메뉴 리스트 아이템 정보 (사진 + 이름 + 가격)
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                .menu-list-item-info-name{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                .menu-list-item-info-price{
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #8C8C8C;
+                }
+            }
+            .menu-list-item-img{// 메뉴 리스트 아이템 이미지
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                background-color: black;
+                margin-right: 10px;
+                &.sold-out{// 품절 상태일 때 이미지 흑백 처리
+                    opacity: 0.5; 
+                    filter: grayscale(100%); 
+                }
+            }
+        }
+    }
+    .category-add-button{
+        width: 185px;
+        height: 45px;
+        border: 1px solid #4162FF ;
+        border-radius: 50px;
+        background-color: white;
+        color: #4162FF;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: auto;
+        margin-bottom: 50px;
+    }
+}

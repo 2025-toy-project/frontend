@@ -1,0 +1,33 @@
+// Step 4 컨테이너
+.register-step4-container {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    // 아이콘 컨테이너
+    .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    // 타이틀 스타일
+    .title {
+        font-size: 30px;
+        font-weight: 600;
+        color: #4162FF;
+        margin-bottom: 16px;
+    }
+
+    // 설명 텍스트 스타일
+    .description {
+        font-size: 16px;
+        font-weight: 300;
+        color: #898C9A;
+        line-height: 1.6;
+    }
+}

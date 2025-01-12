@@ -1,0 +1,33 @@
+//입력 폼 그룹 스타일
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    // 라벨 스타일
+    label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+        line-height: 21.48px;
+    }
+
+    // 입력 필드 스타일
+    .form-control {
+        height: 49px;
+        font-size: 16px;
+        color: #3E3E3E;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        outline: none;
+        padding-left: 20px;
+
+        &:focus {
+            border: 1.5px solid #007bff;
+        }
+    }
+
+    .form-text{
+        color: #007bff;
+    }
+}
