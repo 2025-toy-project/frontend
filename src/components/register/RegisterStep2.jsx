@@ -84,11 +84,12 @@ const RegisterStep2 = () => {
             className="form-control"
             disabled={!isVerificationActive}
           />
-          {isVerificationActive && (
-            <small className="form-text">
-              인증번호가 오지 않으면 '-이 포함되었는지, 전화번호가 정확히 입력되었는지 확인해주세요.
-            </small>
-          )}
+          <small
+            className="form-text"
+            style={{ visibility: isVerificationActive ? 'visible' : 'hidden' }}
+          >
+            인증번호가 오지 않으면 '-이 포함되었는지, 전화번호가 정확히 입력되었는지 확인해주세요.
+          </small>
         </div>
 
         <div className="form-group">
