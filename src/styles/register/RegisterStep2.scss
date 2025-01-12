@@ -1,16 +1,16 @@
+@import 'commons/register/form_group.scss';
+
 // Step 2 컨테이너
 .register-step2-container {
     padding: 50px;
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-family: 'Arial', sans-serif;
 
-    @media (max-width: 1024px) {
+    @media (min-width: 1024px) {
         width: 500px;
     }
 
-    // 좌/우 컬럼 스타일
     .left-column,
     .right-column {
         flex: 1;
@@ -19,55 +19,10 @@
         gap: 20px;
     }
 
-    // 입력 폼 그룹 스타일
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-
-        // 라벨 스타일
-        label {
-            font-size: 18px;
-            font-weight: 500;
-            color: #000;
-            line-height: 21.48px;
-        }
-
-        // 입력 필드 스타일
-        .form-control {
-            height: 49px;
-            font-size: 16px;
-            color: #3E3E3E;
-            border: 1px solid #ccc;
-            border-radius: 7px;
-            outline: none;
-            padding-left: 20px;
-
-            &:focus {
-                border: 1.5px solid #007bff;
-            }
-
-            &:disabled {
-                background-color: #D3D5DE;
-                color: #898C9A;
-                border: 1.5px solid #E6E9EE;
-                cursor: not-allowed;
-            }
-        }
-
-        // 보조 텍스트 스타일
-        .form-text {
-            font-size: 12px;
-            color: #4162FF;
-        }
-    }
-
-    // 버튼이 포함된 입력 필드 스타일
     .input-with-button {
         display: flex;
         gap: 8px;
 
-        // 버튼 스타일
         .btn {
             width: 109px;
             height: 49px;

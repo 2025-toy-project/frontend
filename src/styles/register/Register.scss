@@ -2,100 +2,92 @@
 .register-page-container {
     display: flex;
     position: relative;
-
     width: 100%;
-    
     flex-direction: column;
     align-items: center;
-
     padding-top: 58px;
-}
-
-// 뒤로 가기 버튼
-.register-back-btn {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    font-size: 40px;
-    color: #898C9A;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+    * {
+        box-sizing: content-box;
+    }
   
-// 상단 로고
-.register-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 44px;
-    box-sizing: border-box;
-    font-size: 18px;
-    color: #333;
+    // 상단 로고
+    .register-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 44px;
+      box-sizing: border-box;
+      font-size: 18px;
+      color: #333;
   
-    .register-header-phone {
+      .register-header-phone {
         color: #898C9A;
         font-weight: 300;
         line-height: 26.25px;
         padding-left: 30px;
         font-size: 22px;
+      }
     }
-}
   
-// 회원가입 타이틀
-.register-title {
-    font-size: 22px;
-    margin: 20px 0;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 130.41;
-
-}
-
-// 회원가입 단계
-.register-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    line-height: 19.2px;
-    color: #aaa;
+    // 회원가입 타이틀
+    .register-title {
+      font-size: 22px;
+      margin: 20px 0;
+      text-align: center;
+      font-weight: 500;
+    }
   
-    .register-step {
+    // 회원가입 단계
+    .register-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      line-height: 19.2px;
+      color: #aaa;
+      width: 390.88px;
+      height: 22px;
+  
+      .register-step {
         &.active {
-            color: #4162FF;
-            text-decoration: underline;
+          color: #4162FF;
+          text-decoration: underline;
         }
+      }
     }
-
-    width: 390.88px;
-    height: 22px;
-    font-size: 16px;
-    line-height: 19.2px;
-}
   
-// 회원가입 content
-.register-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    // 뒤로 가기 버튼
+    .register-back-btn {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      font-size: 40px;
+      color: #898C9A;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   
-// 하단 버튼
-.register-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
+    // 회원가입 content
+    .register-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   
-    button {
+    // 하단 버튼
+    .register-footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+  
+      button {
         width: 290px;
         height: 49px;
         font-size: 18px;
@@ -104,14 +96,15 @@
         border-radius: 4px;
         cursor: pointer;
         transition: opacity 0.3s ease;
-    
+  
         &.register-next-btn {
           background-color: #898c9a;
         }
-    
+  
         &.register-active-btn {
           background-color: #4162ff;
         }
-    }    
-}
+      }
+    }
+  }
   
