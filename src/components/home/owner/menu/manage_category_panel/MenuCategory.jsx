@@ -10,7 +10,7 @@ const menu_category_list = [
   { id: 5, name: '사이드' },
 ];
 
-const MenuCategory = () => {
+const MenuCategory = ({ onItemClick }) => {
   const [activeCategory, setActiveCategory] = useState(null); // 활성화된 카테고리를 관리하는 상태
 
   const handleCategoryClick = (id) => {
@@ -30,7 +30,10 @@ const MenuCategory = () => {
               className={`category-list-item ${
                 activeCategory === category_list.id ? 'active' : ''
               }`}
-              onClick={() => handleCategoryClick(category_list.id)}
+              onClick={() => {
+                handleCategoryClick(category_list.id);
+                onItemClick(category_list.name);
+              }}
             >
               {category_list.name}
             </li>
