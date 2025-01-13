@@ -54,6 +54,7 @@
             cursor: pointer;
             &.active{
                 background-color: #D4E2FC;
+                width: 100%;
                 font-weight: 600;
                 color: #4162FF;
             } &:not(:first-child) {
