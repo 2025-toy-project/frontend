@@ -1,5 +1,5 @@
 .category-container{
-    box-sizing: border-box;// 박스 모델 설정 패딩, 보더가 넘어가는거 방지해줌
+    *{box-sizing: border-box;}// 박스 모델 설정 패딩, 보더가 넘어가는거 방지해줌
     position: relative;
     display: flex;
     flex-direction: column;
@@ -75,7 +75,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-right: 18px;
                 font-size:11px;
                 font-weight: 400;
                 width: 34px;
