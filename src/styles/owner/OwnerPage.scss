@@ -11,6 +11,7 @@
     background-color: #f3f4f6;
     flex: 1;
     display: flex;
+    width: 100%;
 
     // sidebar와 content 사이 레이아웃 - 주문접수, 메뉴관리, 매장관리 페이지에서 사용하면 됨
     .panel-container {
