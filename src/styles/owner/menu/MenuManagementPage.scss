@@ -1,4 +1,5 @@
-.menu-management-grid {// 메뉴 관리 선택택 그리드
+.menu-management-grid {// 메뉴 관리 선택 그리드
+  margin-top: 10px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -9,7 +10,6 @@
     height: 67px;
     border-radius: 7px;
     top: 9px;
-    left: 21px;
 }
   
 .menu-management-item {// 메뉴 관리 선택 아이템
@@ -24,6 +24,7 @@
   border-radius: 7px;
   background-color: #e6e9ee;
   color: #898C9A;
+  transition: all 0.3s;
   &.active {
     background-color: white;
     font-weight: 500;

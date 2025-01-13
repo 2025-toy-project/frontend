@@ -24,34 +24,36 @@ const MenuList = () => {
       <div className="menu-list-box">
         {menu_list.map((menu) => (
           <React.Fragment key={menu.id}>
-            <li
-              className={`menu-list-item-container ${
-                activeMenu === menu.id ? 'active' : ''
-              }`}
-              onClick={() => handleMenuClick(menu.id)}
-            >
-              <img
-                src={owner_logo}
-                className={`menu-list-item-img ${
-                  menu.soldOut ? 'sold-out' : ''
+            <ul>
+              <li
+                className={`menu-list-item-container ${
+                  activeMenu === menu.id ? 'active' : ''
                 }`}
-              />
-              {menu.soldOut && (
-                <div
-                  className={`menu-list-item-overlay ${
+                onClick={() => handleMenuClick(menu.id)}
+              >
+                <img
+                  src={owner_logo}
+                  className={`menu-list-item-img ${
                     menu.soldOut ? 'sold-out' : ''
                   }`}
-                >
-                  품절
+                />
+                {menu.soldOut && (
+                  <div
+                    className={`menu-list-item-overlay ${
+                      menu.soldOut ? 'sold-out' : ''
+                    }`}
+                  >
+                    품절
+                  </div>
+                )}
+                <div className="menu-list-item-info">
+                  <span className="menu-list-item-info-name">{menu.name}</span>
+                  <span className="menu-list-item-info-price">
+                    {menu.price}원
+                  </span>
                 </div>
-              )}
-              <div className="menu-list-item-info">
-                <span className="menu-list-item-info-name">{menu.name}</span>
-                <span className="menu-list-item-info-price">
-                  {menu.price}원
-                </span>
-              </div>
-            </li>
+              </li>
+            </ul>
           </React.Fragment>
         ))}
       </div>
