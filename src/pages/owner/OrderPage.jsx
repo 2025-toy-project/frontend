@@ -1,3 +1,4 @@
+import OrderDetail from 'components/owner/order/OrderDetail';
 import OrderPenal from 'components/owner/order/OrderPenal';
 import { useState } from 'react';
 import 'styles/owner/OrderPage.scss';
@@ -13,7 +14,9 @@ const OrderPage = () => {
   return (
     <div className="order-page-container">
       <OrderPenal panelState={panelState} setPanelState={setPanelState} />
-      <div className="order-content-container"></div>
+      <div className="order-content-container">
+        <OrderDetail />
+      </div>
     </div>
   );
 };
