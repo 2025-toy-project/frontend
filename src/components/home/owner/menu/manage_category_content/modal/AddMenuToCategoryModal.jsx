@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import 'styles/owner/menu/manage_category/content/modal/AddMenuToCategoryModal.scss';
-
-const AddMenuToCategoryModal = ({
-  menuList,
-  selectedMenus,
-  onClose,
-  onSubmit,
-}) => {
+/**
+ * AddMenuToCategoryModal (하위 Presentational)
+ * - 카테고리 추가 모달창 구현
+ * - 메뉴 추가 클릭 시 모달이 오픈됨과 동시에 메뉴들이 보이게 됨
+ */
+const AddMenuToCategoryModal = ({ menuList, selectedMenus, onSubmit }) => {
   const [tempSelectedMenus, setTempSelectedMenus] = useState(selectedMenus);
 
   const toggleMenuSelection = (menu) => {
