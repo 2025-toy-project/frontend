@@ -44,7 +44,7 @@ const MenuManagementPage = () => {
   );
 
   return (
-    <div className="order-page-container">
+    <div className="owner-page-container">
       {/* 패널 영역 */}
       <div className="panel-container">
         <MenuManagementList
@@ -55,7 +55,7 @@ const MenuManagementPage = () => {
       </div>
 
       {/* 컨텐츠 영역 */}
-      <div>{renderMainContent}</div>
+      <div className="content-container">{renderMainContent}</div>
     </div>
   );
 };
