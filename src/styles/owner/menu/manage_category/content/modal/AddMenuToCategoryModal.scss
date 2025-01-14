@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal-overlay {//모달창 뒷 배경
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,8 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;   
-  .modal-container {
+
+  .modal-container {//모달창
     display: flex;
     flex-direction: column;
     background: white;
@@ -18,10 +19,12 @@
     width: 400px;
     max-height: 340px;
     overflow-y: auto;
-    .modal-header {
+
+    .modal-header {//모달창 헤더
       display: flex;
       align-items: center;
-      .modal-submit-button{
+
+      .modal-submit-button{//모달창 확인 버튼
         margin-left: auto;
         border: none;
         background-color: #4162FF;
@@ -31,25 +34,25 @@
         border-radius: 50px;
       }
     }
-    .menu-list {
+    .menu-list {//메뉴 리스트
       display: flex;
       flex-direction: column;
       list-style: none;
       padding: 0;
       margin: 0;
       gap: 14px;
-      .menu-item {
+      .menu-item {//메뉴 아이템
         padding-top: 14px;
         display: flex;
         align-items: center;
         position: relative;
-        &:not(:first-child) {
+        &:not(:first-child) { //첫번째 아이템 제외하고는 위에 border-top 추가
           border-top: 1px solid #D9D9D9;
         }
         &:last-child{
           padding-bottom: 14px;
         }
-        .menu-label{
+        .menu-label{//메뉴 라벨(체크박스, 메뉴 이름)
           display: flex;
           align-items: center;
           .menu-checkbox {
@@ -57,8 +60,8 @@
             height: 21px;
             margin-right: 20px;
             appearance: none; 
-            border: 2px solid #d3d3d3; /* 체크박스 기본 테두리 색 */
-            border-radius: 4px; /* 원하는 경우 둥근 모서리 추가 */
+            border: 2px solid #d3d3d3; 
+            border-radius: 4px;
             outline: none;
             cursor: pointer;
             position: relative;
@@ -66,7 +69,7 @@
             &:checked {
               background-color: #ff5a69; 
               color: white;
-              &::after {
+              &::after {//체크박스 커스텀 체크 표시
                 content: "✔"; 
                 color: white;
                 font-size: 14px;
