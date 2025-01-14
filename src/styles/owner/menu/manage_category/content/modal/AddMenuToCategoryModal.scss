@@ -11,10 +11,12 @@
   z-index: 1000;   
 
   .modal-container {//모달창
+    padding-right: 37px;
+    padding-left: 37px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     background: white;
-    padding-left: 20px;
     border-radius: 10px;
     width: 400px;
     max-height: 340px;
