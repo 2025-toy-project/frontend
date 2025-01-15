@@ -1,4 +1,5 @@
 import 'styles/owner/order/OrderDetail.scss';
+import { parseDateToMdHm } from 'utils/dateFormat';
 
 const orderDetail = {
   orderDetail: {
@@ -278,11 +279,15 @@ const OrderDetail = () => {
             </div>
             <div className="order-time">
               <label>주문시간</label>
-              <span>{orderDetail.orderDetail.orderRequestTime}</span>
+              <span>
+                {parseDateToMdHm(orderDetail.orderDetail.orderRequestTime)}
+              </span>
             </div>
             <div className="accept-time">
               <label>접수시간</label>
-              <span>{orderDetail.orderDetail.orderAcceptTime}</span>
+              <span>
+                {parseDateToMdHm(orderDetail.orderDetail.orderAcceptTime)}
+              </span>
             </div>
           </div>
           <div className="order-request-container">
