@@ -1,6 +1,6 @@
-import MenuManagementPage from 'pages/owner/menu/MenuManagementPage';
-import OrderPage from 'pages/owner/OrderPage';
+import OrderPage, { loader as orderLoader } from 'pages/owner/OrderPage';
 import OwnerPage from 'pages/owner/OwnerPage';
+import MenuManagementPage from 'pages/owner/menu/MenuManagementPage';
 
 const owner = [
   {
@@ -10,6 +10,7 @@ const owner = [
       {
         index: true,
         element: <OrderPage />,
+        loader: orderLoader,
       },
       {
         path: 'menu',
