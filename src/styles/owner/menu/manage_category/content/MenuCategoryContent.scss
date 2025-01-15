@@ -1,0 +1,137 @@
+.menu-category-container{
+    *{box-sizing: border-box;}
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-top: 35px;
+    padding-left: 3%;
+    padding-right: 3%;
+    gap: 20px;
+    .menu-category-header{
+        display: flex;
+        justify-content: space-between;
+        .menu-category-header-title{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .menu-category-action-box{  
+            display: flex;
+            flex-direction: row;
+            gap: 7px;
+            .menu-category-remove-button{
+                width: 90px;
+                height: 36px;
+                background-color: #D3D5DE;
+                border-radius: 50px;
+                border: none;
+                font-weight: 500;
+            }
+            .menu-category-save-button{
+                width: 90px;
+                height: 36px;
+                border-radius: 50px;
+                background-color: #4162FF;
+                border: none;
+                font-weight: 500;
+                color: white;
+            }
+        }
+    }
+    .menu-category-form{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .menu-category-form-title{
+            justify-content: center;
+            padding-left: 23px;
+            border: 1px solid #E6E9EE;
+            border-radius: 10px;
+            width: 100%;;
+            height: 52px;
+            background-color: white;
+            color: black;
+            font-weight: 400;
+            font-size: 16px;
+            &::placeholder{
+                color: #898C9A;
+            }
+        }.menu-category-form-description{
+            padding:  13px 13px 23px 23px;
+            border: 1px solid #E6E9EE;
+            border-radius: 10px;
+            width: 100%;;
+            height: 52px;
+            background-color: white;
+            color: black;
+            font-weight: 400;
+            font-size: 16px;
+            min-height: 90px;
+            &::placeholder{
+                color: #898C9A;
+                font-weight: 400;
+            }
+        }
+    }
+    .menu-category-menu-container{
+        background-color: white;
+        width: 100%;
+        border: 1px solid #E6E9EE;
+        border-radius: 10px;
+        .menu-category-menu-header{
+            width: 90%;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: 1px solid #D9D9D9;
+            margin-left: 5%;
+            .menu-category-menu-title{
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .menu-category-menu-count{
+                margin-left: 16px;
+                font-size: #898C9A;
+                color: #898C9A;
+            }
+            .menu-category-menu-add-button{
+                position: absolute;
+                right: 40px;
+                border: none;
+                text-decoration: underline;
+                background-color: white;
+                color: #4162FF;
+            }
+        }
+        .menu-category-menu-list{
+            width: 100%;
+            max-height: 400px;
+            overflow-y: auto;
+            .menu-category-menu-item-box{
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between; 
+                align-items: center; 
+                .menu-category-menu-item-name{
+                    padding-left: 10px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                .menu-category-menu-item-price{
+                    right: 100px;
+                    font-size: 14px;
+                    font-weight: 400; 
+                    margin-left: auto;
+                }
+                .menu-category-menu-item-setting{
+                    margin-left: 80px; 
+                    border: none;
+                    background-color: white;
+                }
+            }
+
+        }
+    }
+}

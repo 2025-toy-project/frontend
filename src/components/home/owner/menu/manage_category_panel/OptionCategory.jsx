@@ -1,30 +1,34 @@
 import SortButton from 'commons/SortButton';
 import React, { useState } from 'react';
 import 'styles/owner/menu/manage_category/Category.scss';
-
-const menu_category_list = [
-  { id: 1, name: '추천 상품' },
-  { id: 2, name: '음료' },
+/*
+ * OptionCategory 패널 컴포넌트
+ * - 옵션 카테고리 패널부 구현
+ * - 옵션 카테고리에 대한 리스트를 보여주고
+ * - 선택 시 해당 카테고리에 대한 설정이 활성화되는 기능 구현
+ */
+const option_category_list = [
+  { id: 1, name: '시럽' },
+  { id: 2, name: '토핑' },
   { id: 3, name: '디저트' },
-  { id: 4, name: '식사' },
   { id: 5, name: '사이드' },
 ];
 
-const MenuCategory = () => {
-  const [activeCategory, setActiveCategory] = useState(null); // 활성화된 카테고리를 관리하는 상태
+const OptionCategory = () => {
+  const [activeCategory, setActiveCategory] = useState(null);
 
   const handleCategoryClick = (id) => {
-    setActiveCategory(id); // 클릭된 카테고리를 활성화 상태로 설정
+    setActiveCategory(id);
   };
 
   return (
     <div className="category-container">
       <div className="category-title-box">
-        <p className="category-title-text">메뉴 카테고리</p>
+        <p className="category-title-text">옵션 카테고리</p>
         <SortButton className="category-sort-button"></SortButton>
       </div>
       <div className="category-list-box">
-        {menu_category_list.map((category_list) => (
+        {option_category_list.map((category_list, index) => (
           <React.Fragment key={category_list.id}>
             <li
               className={`category-list-item ${
@@ -37,9 +41,9 @@ const MenuCategory = () => {
           </React.Fragment>
         ))}
       </div>
-      <button className="category-add-button">+ 메뉴 카테고리 추가</button>
+      <button className="category-add-button">+ 옵션 카테고리 추가</button>
     </div>
   );
 };
 
-export default MenuCategory;
+export default OptionCategory;

@@ -39,13 +39,13 @@
     .category-list-box{// 메뉴 카테고리, 옵션 카테고리, 세부 옵션 리스트 박스
         background-color: #F3F4F6;
         border-radius: 10px;
-        width: 220px;
+        width: 207.5px;
         max-height: 470px;
         overflow: hidden;
         .category-list-item{ 
             display: flex;
             height: 47px;
-            width: 207.5px;
+            width: 100%;
             padding-left: 19px;
             font-size: 14px;
             font-weight: 400;
@@ -53,7 +53,7 @@
             justify-content: space-between;
             cursor: pointer;
             &.active{
-                background-color: #D4E2FC;
+                background-color: #D4E2FC;  
                 font-weight: 600;
                 color: #4162FF;
             } &:not(:first-child) {
@@ -72,6 +72,8 @@
                 }
               }
             .option-list-item-overlay{// 해당 세부 옵션이 품절일때 오버레이 
+                position: absolute;
+                right: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
