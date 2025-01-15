@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import owner_logo from 'assets/logo/logo_white.png'; //이미지 임시용 로고 이미지 불러옴
+/* 
+  MenuList 컴포넌트
+  - 메뉴 목록을 보여주는 컴포넌트
+  - 메뉴 클릭 시 해당 메뉴에 대한 상세 정보를 관리할 수 있는 content컴포넌트 불러옴
+*/
 const menu_list = [
   { id: 1, name: '시그니처 탕수육', price: 20000, soldOut: true },
   { id: 2, name: '고량주', price: 5000, soldOut: false },

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import 'styles/owner/menu/manage_category/Category.scss';
-
+/**
+ * DetailOption 패널 컴포넌트
+ * - 세부옵션 추가 패널부 구현
+ * - 세부옵션에 대한 리스트를 보여주고, 선택 시 해당 옵션에 대한 설정이 활성화되는 기능 구현
+ */
 const detail_option_list = [
   { id: 1, name: '시럽 추가', soldOut: false },
   { id: 2, name: '토핑 추가', soldOut: true },
